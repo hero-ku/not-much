@@ -17,3 +17,13 @@
     --font-color: #f3f3f3;
     --selection-color: black;
 }
+
+/* light mode */
+.dark:has(#theme-switcher:checked) {
+    --bg-color: #e3e3e3;
+    --font-color: #0c0d17;
+    --primary: #0c0d17;
+    --primary-variant: #0c0d17;
+    --secondary: #0c0d17;
+    --selection-color: white;
+}

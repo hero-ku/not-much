@@ -7,7 +7,7 @@ body {
 
 body, main {
   height: 100%;
-  font-family: 'Literata', serif !important;
+  font-family: 'Red Hat Mono', serif !important;
   font-optical-sizing: auto;
   font-style: normal;
   font-size: .95em;
@@ -18,6 +18,49 @@ body, main {
 ::selection {
   background: var(--secondary);
   color: var(--selection-color);
+}
+
+#theme-switcher-container {
+  display: block;
+  margin-left: 25px;
+  margin-top: 25px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  user-select: none;
+  -webit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#theme-switcher {
+  z-index: 20;
+  opacity: 0;
+  position: absolute;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+#sun-icon {
+  position: absolute;
+  height: 32px;
+  width: 32px;
+}
+
+#moon-icon {
+  opacity: 0;
+  position: absolute;
+  height: 32px;
+  width: 32px;
+}
+
+#theme-switcher:checked ~ #sun-icon {
+  opacity: 0;
+}
+
+#theme-switcher:checked ~ #moon-icon {
+  opacity: 100%;
 }
 
 .splash-screen {
